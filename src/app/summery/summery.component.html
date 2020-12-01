@@ -1,0 +1,7 @@
+<div class="summery card">
+<h5 id="tg" class="card-title">Product Summery</h5>
+<div class="content card-body">
+    <div *ngFor="let cart of carts">{{cart.name}} <div id="asd"> X {{cart.qty}} = <span class="lko">${{cart.qty*cart.price}}</span></div></div>
+<div class="lko">total cost = ${{total_cost|number:'1.2-2'}}</div>
+</div>
+</div>

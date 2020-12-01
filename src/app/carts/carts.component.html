@@ -1,0 +1,30 @@
+<h1 *ngIf="carts.length==0">
+    Your cart is empty
+</h1>
+<a *ngIf="carts.length==0" routerLink="../products">Home</a>
+<table *ngIf="carts.length>0" class="table">
+    <thead>
+<tr>
+    <th id="image">product image </th>
+    <th id="name">product name</th>
+    <th id="price">product price</th>
+    <th id="qty">product quantity</th>
+    <th id="tc">total cost</th>
+</tr>
+    </thead>
+    <tbody>
+<tr *ngFor="let cart of carts">
+    <td id="image"><img src="{{cart.image}}"></td>
+    <td id="name"><p>{{cart.name}}</p></td>
+    <td id="price">${{cart.price}}</td>
+    <td id="qty"><span id="decr" (click)="decrement(cart)">-</span>{{cart.qty}}<spna id="incr" (click)="increment(cart)">+</spna></td>
+    <td id="tc">${{cart.price*cart.qty}}</td>
+
+</tr>
+<tr><td></td><td></td><td></td>
+    <td id="po">total amount to pay</td>
+<td id="po">${{total_cost|number:'1.2-2'}}</td></tr>
+
+<tr><td></td><td></td><td></td><td></td><td><button id="place" class="btn btn-sm btn-success" (click)="fun()" routerLink="../placeorder">place order</button></td></tr>
+    </tbody>
+</table>

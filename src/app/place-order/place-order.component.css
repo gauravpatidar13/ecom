@@ -1,0 +1,86 @@
+form{
+width: 300px;
+margin-left: 20px;
+margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background:#f3f7f8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form input{
+    width: 250px;
+}
+form input,button{
+margin:10px 0px;
+}
+.btn-warning{
+    height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    color:brown;
+}
+#uio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+@media(min-width:992px) and (max-width:1199px){
+
+}
+@media(min-width:768px) and (max-width:991px){
+    form{
+        width: 300px;
+        background:#f3f7f8;
+        margin-left: 20px;
+        margin-top: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+}
+@media(min-width:576px) and (max-width:767px){
+    #uio{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }   
+    form{
+        width: 85%;
+        background:#f3f7f8;
+       
+        margin-left: 20px;
+        margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+}
+@media(max-width:575px){
+    #uio{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+    }  
+    form{
+        width: 85%;
+        background:#f3f7f8;
+        margin-left: 20px;
+        margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+ flex-wrap: wrap-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+}

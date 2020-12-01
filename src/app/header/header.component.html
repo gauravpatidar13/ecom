@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<div class="navbar-brand">ecom</div>
+<div class="search-wrapper">
+    <div class="category" >
+        <p [innerHtml]="cate">All Categories</p>
+        <ul>
+            <li (click)="openCategory('All Categories')">All Categories</li>
+            <li (click)="openCategory('Electronics')">Electronics</li>
+            <li (click)="openCategory('Mens')">Men's</li>
+            <li (click)="openCategory('Womens')">Women's</li>
+        </ul>
+    </div>
+    <div class="vr"></div>
+    <input type="text" placeholder="Search here" #searchTerm>
+    <button (click)=openHdl(searchTerm.value)>Search</button>
+</div>
+<a routerLink="carts">Carts<span class="badge badge-warning">{{cart_count}}</span></a>
+</nav>

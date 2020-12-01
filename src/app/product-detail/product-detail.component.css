@@ -1,0 +1,20 @@
+.iol{
+    display: flex;
+    flex-direction: row;
+}
+.iol img{
+    width: 300px;
+}
+.iol .pii{
+    display: flex;
+    flex-direction: column;
+
+}
+.iol .pii #na{
+    font-weight: bold;
+    font-size: 25px;
+}
+.iol .pii #pr{
+    font-weight: bold;
+    font-size: 20px;
+}

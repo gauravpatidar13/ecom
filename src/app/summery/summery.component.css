@@ -1,0 +1,40 @@
+.summery{
+    width: 400px;
+    height: auto;
+    margin-top: 30px;
+}
+.summery #tg{
+    text-align: left;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.summery .content{
+    padding-left: 20px;
+}
+.summery .lko{
+    font-weight: bold;
+}
+.summery #asd{
+    display: inline;
+}
+@media(max-width:575px){
+    .summery{
+        border:2px solid gray;
+        width: 300px;
+        height: auto;
+        margin-top: 10px;
+    }
+    .summery #tg{
+        text-align: left;
+        font-weight: bold;
+        margin-left: 10px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .summery .content{
+        width: 90%;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+}

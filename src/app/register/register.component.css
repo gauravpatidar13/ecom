@@ -1,0 +1,26 @@
+form{
+    width: 350px;    
+margin-left: 50%;
+margin-top: 50px;
+margin-bottom: 50px;
+background:#f3f5f7;
+transform: translate(-50%,0);
+}
+form input{
+    
+    margin-top: 20px;
+}
+form button{
+    margin-top: 20px;
+}
+form .wr{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-success{
+    width: 150px;
+}
