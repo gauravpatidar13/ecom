@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 products;
 category;
 searchTerm;
+filterOption;
   constructor(private atc:AddToCartService,private fps:FetchProductsService,
     private ss:SharedService,private atcfd:AddToCartFromDetailService) {
     this.fps.fetchProduct().subscribe(data=>{
@@ -30,6 +31,10 @@ this.category=data;
 this.fps.fetchProductByCategory(this.category)
 this.ss.products.subscribe(data=>{
   this.products=data;
+})
+this.ss.filterTerm.subscribe(filter=>{
+  console.log(filter)
+  this.filterOption=filter;
 })
     })
    }

@@ -3,7 +3,7 @@ export class Product {
     id:Number;
     category:String;
     image:String;
-    price:String;
+    price:string;
     des:String;
     qty:Number;
 }

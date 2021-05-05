@@ -11,6 +11,8 @@ public products=new Subject<any>();
 public pro=this.products.asObservable();
 public searchTerm=new Subject<any>();
 public search=this.searchTerm.asObservable();
+public filterTerm=new Subject<any>();
+public filter=this.filterTerm.asObservable();
 public delete=new Subject<any>();
 public del=this.delete.asObservable();
 public cartCount=new Subject<any>();
@@ -31,6 +33,9 @@ editpros(pr){
 }
 editMsgs(msg){
   this.message.next(msg);
+}
+filterBy(opt){
+this.filterTerm.next(opt);
 }
   constructor() { }
 }

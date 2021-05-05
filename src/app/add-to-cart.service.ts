@@ -7,14 +7,13 @@ export class AddToCartService {
 carts=[];//we start from empty cart locally
 
   constructor(private ss:SharedService) {
-    if(localStorage.getItem('carts')){
-    
+    if(localStorage.getItem('carts')){    
       this.carts=JSON.parse(localStorage.getItem('carts'))
     }
    }
   addToCart(product){
+    console.log(localStorage.getItem('carts'))
     if(localStorage.getItem('carts')){
-    
       this.carts=JSON.parse(localStorage.getItem('carts'))
     }
     console.log(localStorage.getItem('carts'))

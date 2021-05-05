@@ -48,4 +48,28 @@ if(savedCartCount>0){
     this.cate=cate;
     this.router.navigate(['products'],{queryParams:{category:cate}})
   }
+
+   filterOne(checkbox) {
+    var checkboxes = document.getElementsByName('filter')
+    checkboxes.forEach((item:any) => {
+        if (item !== checkbox) item.checked = false;
+    })
+}
+applyFilter(){
+  var checkboxes = document.getElementsByName('filter')
+  checkboxes.forEach((item:any) => {
+    if(item.id==="filt1"&&item.checked){
+     this.ss.filterBy(1)
+    }
+    else if(item.id==="filt2"&&item.checked){
+      this.ss.filterBy(2);
+    }
+    else if(item.id==="filt3"&&item.checked){
+      this.ss.filterBy(3);
+    }
+})
+}
+closeFilter(){
+  this.ss.filterBy(null)
+}
 }

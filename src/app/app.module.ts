@@ -21,6 +21,7 @@ import { Register3Component } from './register3/register3.component';
 import { Login2Component } from './login2/login2.component';
 import { Login3Component } from './login3/login3.component';
 import { Login4Component } from './login4/login4.component';
+import { FilterByPricePipe } from './filter-by-price.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { Login4Component } from './login4/login4.component';
     Register3Component,
     Login2Component,
     Login3Component,
-    Login4Component
+    Login4Component,
+    FilterByPricePipe
   ],
   imports: [
     BrowserModule,
