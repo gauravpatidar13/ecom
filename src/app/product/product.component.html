@@ -4,5 +4,8 @@
 </div>
     <span>{{product.name}}</span>
     <p>${{product.price}}</p>
-    <button (click)="addToCart(product)">add to cart</button>
+    <div class="btns">
+    <button class="add-to-cart-btn" (click)="addToCart(product)">Add to Cart</button>
+    <button class="detail-btn" (click)="openProductDetail(product)">Detail</button>
+</div>
 </div>

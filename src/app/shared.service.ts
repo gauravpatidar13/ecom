@@ -16,6 +16,7 @@ public del=this.delete.asObservable();
 public cartCount=new Subject<any>();
 public cartCnt=this.cartCount.asObservable();
 onCartCount(ct){
+  localStorage.setItem('cartCount',ct);
 this.cartCount.next(ct)
 }
 delity(dee){

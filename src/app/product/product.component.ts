@@ -17,6 +17,7 @@ this.toastr.success("product successfully added to card","Added Into Cart")
   openProductDetail(product){
 this.router.navigate(['products',product.id])
   }
+
   ngOnInit(): void {
   }
 

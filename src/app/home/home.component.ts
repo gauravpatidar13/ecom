@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddToCartFromDetailService } from '../add-to-cart-from-detail.service';
 import { AddToCartService } from '../add-to-cart.service';
 import { FetchProductsService } from '../fetch-products.service';
 import { SharedService } from '../shared.service';
@@ -13,12 +14,16 @@ products;
 category;
 searchTerm;
   constructor(private atc:AddToCartService,private fps:FetchProductsService,
-    private ss:SharedService) {
+    private ss:SharedService,private atcfd:AddToCartFromDetailService) {
     this.fps.fetchProduct().subscribe(data=>{
       this.products=data;
     })
     this.ss.searchTerm.subscribe(data=>{
       this.searchTerm=data;
+    })
+    this.atcfd.pro.subscribe(item=>{
+      console.log(item);
+      this.atc.addToCart(item)
     })
     this.ss.message.subscribe(data=>{
 this.category=data;

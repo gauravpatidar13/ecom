@@ -1,26 +1,317 @@
-form{
-    width: 350px;    
-margin-left: 50%;
-margin-top: 50px;
-margin-bottom: 50px;
-background:#f3f5f7;
-transform: translate(-50%,0);
-}
-form input{
-    
-    margin-top: 20px;
-}
-form button{
-    margin-top: 20px;
-}
-form .wr{
-    width: 300px;
+.login-wr{
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    padding-top: 0px;
+}
+.login-wr .inp-wr{
+    width: 60%;
+    padding:8px 18px;
+    background:rgb(240, 240, 240);
+    border-radius: 20px;
+}
+.login-wr .btn-sign-up{
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding: 8px 25px;
+    font-size: 16px;
+    outline: none;
+    background: rgb(94,148,254);
+}
+.login-wr .btn-sign-up:hover{
+    background:rgba(94,148,254,0.8);
+}
+.social-sign-methods{
+    display: flex;
+}
+.social-sign-methods .circle{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
+    background:#fff;
+    border:2px solid #000;  
+
+}
+.social-sign-methods .circle i{
+    font-size: 20px;
+    color:#000;
+    font-weight: bold;
+}
+.login-frm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.inp-wr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    padding-left: 15px;
+}
+.inp-wr i{
+   width: 30px;
+    line-height: 28px;
+    padding-left: 5px;
+    height: 30px;
+    display: block;
+}
+.inp-wr input{
+    background: transparent;
+    outline: none;
+    border:none;
+    font-size: 16px;
+    font-weight: 500;
+    width: -webkit-fill-available;
+    margin-left: 10px;
+}
+.login-frm .sign-up-label{
+    font-weight: bold;
+    font-size: 30px;
+}
+.lbl2{
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.btn-success{
-    width: 150px;
+.login-footer .cont{
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    width: 80%;
+}
+.login-footer .cont h3{
+    color:#fff;
+    font-size: 16px;
+    margin-left: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.login-footer .cont p{
+    color:#fff;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.comp .overlay{
+    width: 100%;
+    height: 400px;
+    padding:20px;
+    position: relative;
+    right:30px;
+}
+.comp{
+    position: absolute;
+    width: 90%;
+    right: 30px;
+    top: 50%;
+}
+.comp img{
+    width: 100%;
+}
+.cont .btn-sign-up{
+    border:1px solid #fff;
+    border-radius: 20px;
+    background:transparent;
+    color:#fff;
+    padding:8px 20px;
+    font-size: 14px;
+}
+
+.login-bg{
+    height: auto;
+    width: 60%;
+    padding:20px;
+    padding-left: 0;
+    padding-top: 0px;
+    margin-top: -20px;
+    padding-right: 0;
+}
+.login-bg .login-img {
+    height: 100%;
+    width: 70%;
+    position: relative;
+}
+.login-bg .login-img img{
+    width: 90%;
+    position: absolute;
+    top:58%;
+    transform: scale(1.2);
+}
+.clip-text{
+ color:#fff;
+ margin-bottom: -213px;
+ width: 100%;
+ margin-left: 0px;
+ padding-left: 20px;
+ padding-right: 92px;
+ padding-top: 40px;
+position: relative;
+z-index: 5;
+}
+.btn-sign-in{
+    background:transparent;
+    border:2px solid #fff;
+    border-radius: 20px;
+    color:#fff;
+    padding:8px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.clip-bg{
+    width: 100%;
+    height: 100%;
+    background:rgb(29,161,244);
+    position: relative;
+    z-index: -2;
+    clip-path: ellipse(68% 64% at 22% 38%);
+}
+.login-img{
+    width: 100%!important;
+    height: 100%;
+    position: relative;
+    z-index: -2;
+}
+.login-img img{
+    width: 55%!important;
+    top: 40%!important;
+    left:25%;
+}
+
+@media (max-width:370px){
+.login-frm{
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    margin-left: 0;
+}
+.clip-bg{
+    background: unset;
+}
+.login-wr{
+    flex-direction: column;
+}
+.login-wr .inp-wr{
+    width: 100%;
+}
+.login-bg{
+    padding-top: 130px;
+    margin-top: 0;
+    padding-bottom: 48%;
+  background:rgb(36, 169, 246);
+  clip-path: ellipse(68% 56% at 49% 68%);
+    width: 100%;
+}
+.clip-text{
+    margin-bottom: 0;
+    background:unset;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 2px;
+}
+.login-bg .login-img img{
+    top:0;
+    left:16%;
+}
+.login-bg .login-img{
+    width: 80%;
+    height: unset;
+    margin-left: 0;
+}
+.clip-text p{
+    margin-right: 20px;
+}
+}
+@media (min-width:371px) and (max-width:567px){
+    .login-wr{
+        flex-direction: column;
+    }
+    .login-frm{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .login-wr .inp-wr{
+        width: 100%;
+    }
+    .login-bg{
+        padding-top: 110px;
+        margin-top: 0;
+        padding-bottom: 40px;
+      background:rgb(36, 169, 246);
+      clip-path: ellipse(68% 56% at 49% 68%);
+        display: flex;
+        width: 100%;
+        flex-direction: row!important;
+    }
+    .clip-text{
+        clip-path: unset;
+        background:transparent;
+        margin-bottom: 0;
+        padding-left: 25px;
+        padding-right: 0;
+    }
+    .login-img img{
+        transform: scale(0.8)!important;
+        top:20%!important;
+        left:5%;
+        width: 95%!important;
+    }
+    .clip-text p{
+        font-size: 14px;
+    }
+    .clip-bg{
+        background:transparent;
+    }
+}
+@media (min-width:568px) and (max-width:767px){
+.login-bg .login-img img{
+    top: 58% !important;
+    left:16%;
+    width: 80%!important;
+}
+.clip-text p{
+    margin-left: 0px;
+}
+.clip-text{
+    /* background:rgb(36, 169, 246); */
+    /* clip-path: ellipse(95% 72% at 85% 70%); */
+    padding-right: 15px;
+    margin-bottom: -260px;
+}
+.login-wr .inp-wr{
+    width: 100%;
+}
+}
+@media (min-width:768px) and (max-width:991px){
+    .login-wr .inp-wr{
+        width: 100%;
+    }
+  
+}
+@media (min-width:992px) and (max-width:1199px){
+    .clip-text{
+        padding-right: 30px;
+        margin-bottom: -213px;
+    }
+    .clip-bg{
+        clip-path: ellipse(78% 64% at 12% 38%);
+    }
+    .login-bg{
+        padding-bottom: 0;
+    }
 }

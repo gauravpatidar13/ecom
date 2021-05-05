@@ -1,10 +1,14 @@
+<app-header></app-header>
 <div class="iol">
+    <div class="pro-card">
     <div>
 <img src="{{product.image}}">
 </div>
 <div class="pii">
 <span id="na">{{product.name}}</span>
-<span id="pr">${{product.price}}</span>
-<span>{{product.des}}</span>
+<span id="pr"><sup>$</sup>{{product.price}}</span>
+<span id="des">{{product.des}}</span>
+<button class="add-to-cart" (click)="addToCart(product)">Add to Card</button>
+</div>
 </div>
 </div>

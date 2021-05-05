@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    padding:0;
+    margin:0;
+}
+.toast-container{
+    border-radius: 22px!important;
+    box-shadow: -5px 8px 16px 0px rgba(0,0,0,0.3)!important;
+    margin-bottom: 2px;
+    background-image: none;
+    border:2px solid salmon!important;
+}
+.toast-container .toast{
+    background-color: #fff!important;
+    font-size: 14px;
+ 
+}
+.toast-container .ngx-toastr{
+    padding:10px!important;
+    width:235px!important;
+    margin-bottom: 0px!important;
+    border-radius: 20px!important;
+}
+.toast-success{
+    font-size: 14px;
+    background:rgb(30,61,90)!important;
+    background-image: none!important;
+}

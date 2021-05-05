@@ -1,5 +1,6 @@
 .bg-dark{
-    background: rgb(20, 20, 28);
+    /* background: rgb(20, 20, 28); */
+    background:rgb(30,61,90)!important;
     height: 70px;
     display: flex;
     justify-content: center;

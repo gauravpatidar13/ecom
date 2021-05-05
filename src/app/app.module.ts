@@ -16,6 +16,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { SearchPipe } from './search.pipe';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { Register2Component } from './register2/register2.component';
+import { Register3Component } from './register3/register3.component';
+import { Login2Component } from './login2/login2.component';
+import { Login3Component } from './login3/login3.component';
+import { Login4Component } from './login4/login4.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +34,12 @@ import { RegisterComponent } from './register/register.component';
     ThankYouComponent,
     SearchPipe,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    Register2Component,
+    Register3Component,
+    Login2Component,
+    Login3Component,
+    Login4Component
   ],
   imports: [
     BrowserModule,

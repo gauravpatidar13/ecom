@@ -14,7 +14,13 @@ openHdl(searchTerm){
 this.ss.editSearch(searchTerm)
 }
   constructor(private router:Router,private ar:ActivatedRoute,private ss:SharedService) {
+   
+    let savedCartCount=parseInt(localStorage.getItem('cartCount'));
+if(savedCartCount>0){
+  this.cart_count=savedCartCount;
+}
    this.ss.cartCount.subscribe(data=>{
+     console.log(data)
      this.cart_count=data;
    })
     this.ar.queryParamMap.subscribe(params=>{

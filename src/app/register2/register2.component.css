@@ -1,0 +1,149 @@
+.register-wr{
+    width: 80%;
+    height: auto;
+    margin-left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 100px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px 4px rgb(182,176,186);
+}
+.register-wr .register-frm{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.check-wr span{
+    font-size: 14px;
+    font-weight: bold;
+}
+.check-wr input{
+    margin-left: 10px;
+    margin-right: 6px;
+    margin-top: 15px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.register-wr .register-frm .inp-wr{
+background:#fff;
+border-radius: 20px;
+border:none;
+padding-left: 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+box-shadow: 0px 4px 4px 3px rgb(210, 210, 210);
+}
+.register-wr .register-frm .inp-wr input{
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.register-wr .register-frm .inp-wr i{
+    margin-right: 15px;
+    color:rgb(165,72,221)
+}
+.register-wr .register-frm h2{
+    color:rgb(113,47,173);
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: bold;
+
+}
+.register-wr .register-info{
+    width: 40%;
+    height: auto;
+    background:linear-gradient(to bottom,rgb(176,16,238) 0%,rgb(220,54,250) 51%,rgb(231,68,247) 100%);
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.register-wr .register-frm .create-ac button{
+    border:none;
+    color:#fff;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    height: 50px;
+ white-space: nowrap;
+ padding:0 60px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    background:rgb(170,24,244);
+}
+.reg-ii h3{
+    color:#fff;
+    font-weight: bold;
+    font-size: 28px;
+}
+.reg-ii p{
+    color:#ddd;
+    font-size: 12px;
+    font-weight: 700;
+}
+.reg-ii button{
+    background:transparent;
+    color:#ddd;
+    border-radius: 20px;
+    border:2px solid #fff;
+    padding:8px 20px;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+@media (max-width:567px){
+    .register-wr{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    margin-left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px 4px rgb(182 176 186);
+    }
+    .register-wr .register-frm{
+        width: 100%;
+    }
+    .register-wr .register-info{
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .register-wr .register-frm .create-ac button{
+ width: 100%;
+ padding:0 30px;
+        margin-top: 35px;
+    }
+    .register-wr .register-frm .inp-wr input{
+        width: calc(100% - 40px);
+    }
+}
+@media (min-width:568px) and (max-width:767px){
+    .register-wr{
+        width: 100%;
+    }
+    .register-wr .register-frm{
+        width: 100%;
+    }
+}

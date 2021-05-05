@@ -1,0 +1,10 @@
+[{"name":"smart bag for traveling","category":"womens","id":1,"image":"/assets/images/img1.jpg","price":"100.50","des":"this is product description hope you like it","qty":1},
+{"name":"black white shirt","category":"mens","id":2,"image":"/assets/images/img2.jpg","price":"120.00","des":"this is product description hope you like it","qty":1},
+{"name":"smart winter coat","category":"mens","id":3,"image":"/assets/images/img3.jpg","price":"150.34","des":"this is product description hope you like it","qty":1},
+{"name":"blue t shirts","category":"mens","id":4,"image":"/assets/images/img4.jpg","price":"105.50","des":"this is product description hope you like it","qty":1},
+{"name":"silver braslet for women","category":"womens","id":5,"image":"/assets/images/img5.jpg","price":"70.00","des":"this is product description hope you like it","qty":1},
+{"name":"bangle for women","category":"womens","id":6,"image":"/assets/images/img6.jpg","price":"90.34","des":"this is product description hope you like it","qty":1},
+{"name":"cool diamong ring","id":7,"category":"womens","image":"/assets/images/img7.jpg","price":"100.50","des":"this is product description hope you like it","qty":1},
+{"name":"gold bangel for women","id":8,"category":"womens","image":"/assets/images/img8.jpg","price":"220.00","des":"this is product description hope you like it","qty":1},
+{"name":"black hdd for comptuer","id":9,"category":"electronics","image":"/assets/images/img9.jpg","price":"50.34","des":"this is product description hope you like it","qty":1},
+{"name":"pendrive 64 gb","id":10,"category":"electronics","image":"/assets/images/img10.jpg","price":"150.34","des":"this is product description hope you like it","qty":1}]

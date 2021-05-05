@@ -1,20 +1,126 @@
 .iol{
     display: flex;
     flex-direction: row;
+    background:rgb(111,109,97);
+    height: calc(100vh - 100px);
 }
 .iol img{
     width: 300px;
+    height: 100%;
+    border-radius: 30px;
 }
 .iol .pii{
     display: flex;
     flex-direction: column;
-
+padding-left: 50px
+;
 }
 .iol .pii #na{
     font-weight: bold;
-    font-size: 25px;
+    font-size: 32px;
+    text-transform: capitalize;
 }
 .iol .pii #pr{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.iol .pii #des{
+    font-size: 18px;
+    font-weight: bold;
+}
+.pro-card{
+    background:rgb(235,235,235);
+    border-radius: 30px;
+    height: auto;
+    width: 60%;
+    margin-left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    padding:30px;
+}
+.add-to-cart{
+    text-transform: uppercase;
+    font-size: 14px;
+    color:#fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background:rgb(71,71,71);
+    border:none;
+    padding:12px 25px;
+}
+@media(max-width:567px){
+    .iol{
+        flex-direction: column!important;
+        height: auto;
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+    .iol .pii{
+        padding-left: 0;
+    }
+    .iol .pii #na{
+        font-size: 20px;
+    }
+    .iol .pii #pr{
+        font-size: 18px;
+    }
+    .iol .pii #des{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .pro-card{
+        flex-direction: column;
+        margin-top: 1%;
+        height: auto;
+        padding:10px;
+        width: 90%;
+    }
+    .add-to-cart{
+        font-size: 12px;
+    }
+    .iol img{
+        width: 35%;
+    }
+}
+@media (min-width:568px) and (max-width:767px){
+   .iol{
+       height: auto;
+       padding-bottom: 30px;
+       padding-top: 20px;
+   }
+    .iol img{
+        width: 150px;
+    }
+    .pro-card{
+        width: calc(100% - 60px);
+        margin-top: 2%;
+        transform: none;
+        height: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-bottom: 20px;
+    }
+}
+@media (min-width:768px) and (max-width:1199px){
+    .iol{
+        height: auto;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+     .iol img{
+         width: 150px;
+     }
+     .pro-card{
+         width: calc(100% - 60px);
+         margin-top: 2%;
+         transform: none;
+         height: auto;
+         margin-left: 30px;
+         margin-right: 30px;
+         padding-bottom: 20px;
+     }   
 }

@@ -1,14 +1,46 @@
-<form class="card">
-    <div class="card-body">
-    <input type="text" placeholder="username" class="form-control">
-    <input type="password" placeholder="password" class="form-control">
-    <div class="wr">
-    <button class="btn btn-sm btn-success" (click)=loginUser()>Login</button>
-    <p style="margin-top: 10px;">OR</p>
+<div class="login-wr">
+    <div class="login-frm">
+        <label class="sign-up-label">Sign Up</label>
+        <div class="inp-wr">
+<i class="fa fa-envelope"></i>
+        <input class="inp" type="text" placeholder="Username">
+    </div>
+    <div class="inp-wr">
+    <i class="fa fa-user"></i>
+        <input class="inp" type="email" placeholder="Email">
+        </div>
+        <div class="inp-wr">
+        <i class="fa fa-lock"></i>
+        <input class="inp" type="password" placeholder="Password">
+        </div>
+        <button class="btn-sign-up">Sign Up</button>
+        <label class="lbl2">Or Sign  up with another platform</label>
+        <div class="social-sign-methods">
+            <div class="circle">
+                <i class="fa fa-facebook"></i>
+            </div>
+            <div class="circle">
+                <i class="fa fa-twitter"></i>
+            </div>
+            <div class="circle">
+                <i class="fa fa-google"></i>
+            </div>
+            <div class="circle">
+                <i class="fa fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+<div class="login-bg">
+    <div class="clip-text">
+        <h3>One of us?</h3>
+        <p>Lorem ipsum dolor sit amet dllkloi consetur adiicing elit. Voluptate ex expedita iusto!</p>
+   <button class="btn-sign-in">Sign In</button>
+    </div>
+    <div class="login-img">
+        <img src="/assets/images/com.png">
+        <div class="clip-bg">
+          
+        </div>
+    </div>
 </div>
-
-<div class="card-footer">
-<button class="btn btn-sm btn-primary" routerLink="../register">Create an account</button>
 </div>
-</div>
-</form>
