@@ -28,6 +28,7 @@ import {AngularFireModule} from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
+import {DatePipe} from '@angular/common';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,AngularFireStorageModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

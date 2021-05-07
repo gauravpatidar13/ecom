@@ -1,9 +1,9 @@
 <div class="product">
     <div>
-    <img src="{{product.image}}" (click)="openProductDetail(product)">
+    <img src="{{product.data.image}}" (click)="openProductDetail(product)">
 </div>
-    <span>{{product.name}}</span>
-    <p>${{product.price}}</p>
+    <span>{{product.data.name}}</span>
+    <p>${{product.data.price}}</p>
     <div class="btns">
     <button class="add-to-cart-btn" (click)="addToCart(product)">Add to Cart</button>
     <button class="detail-btn" (click)="openProductDetail(product)">Detail</button>

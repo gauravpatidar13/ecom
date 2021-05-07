@@ -14,12 +14,12 @@ carts_data;
 products;
 total_cost;
 decrement(cart_item){
-  if(cart_item.qty>1)
+  if(cart_item.data.qty>1)
   {
     let local_carts_data=[];
-cart_item.qty=cart_item.qty-1;
+cart_item.data.qty=cart_item.data.qty-1;
 for(let i=0;i<this.carts.length;i++){
-  local_carts_data.push({id:this.carts[i].id,qty:this.carts[i].qty})
+  local_carts_data.push({id:this.carts[i].id,qty:this.carts[i].data.qty})
       }
       this.carts_data=local_carts_data;
       console.log(this.carts_data)
@@ -37,25 +37,25 @@ this.atc.removeItemById(cart_item.id);
 calTotalPrice(){
   let total=0;
   for(let i=0;i<this.carts.length;i++){
-   total=total+this.carts[i].price*this.carts[i].qty;
+   total=total+this.carts[i].data.price*this.carts[i].data.qty;
   }
   this.total_cost= total;
 }
 calTotalCount(){
   let total=0;
   for(let i=0;i<this.carts.length;i++){
-   total=total+this.carts[i].qty;
+   total=total+this.carts[i].data.qty;
   }
   this.ss.onCartCount(total);
 }
 increment(cart_item){
-if(cart_item.qty<9)
+if(cart_item.data.qty<9)
 {
  let local_carts_data=[];
-cart_item.qty=cart_item.qty+1;
+cart_item.data.qty=cart_item.data.qty+1;
 
   for(let i=0;i<this.carts.length;i++){
-local_carts_data.push({id:this.carts[i].id,qty:this.carts[i].qty})
+local_carts_data.push({id:this.carts[i].id,qty:this.carts[i].data.qty})
     }
     this.carts_data=local_carts_data;
 console.log(this.carts_data)
@@ -83,7 +83,7 @@ initCart(){
   for(let i=0;i<this.products.length;i++){
     for(let j=0;j<this.carts_data.length;j++){
      if(this.products[i].id==this.carts_data[j].id){
-     this.products[i].qty=this.carts_data[j].qty;
+     this.products[i].data.qty=this.carts_data[j].qty;
        this.carts.push(this.products[i])
        break;
      }

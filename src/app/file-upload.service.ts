@@ -14,7 +14,7 @@ export class FileUploadService {
     private ss:SharedService) { }
 
   pushFileToStorage(fileUpload: FileUpload,cb:boolean): Observable<number> {
-    this.basePath=this.basePath+cb?"/profiles":"/products";
+    this.basePath=this.basePath+(cb?"/profiles":"/products");
     const filePath = `${this.basePath}/${fileUpload.file.name}`;
     const storageRef = this.storage.ref(filePath);
     const uploadTask = this.storage.upload(filePath, fileUpload.file);

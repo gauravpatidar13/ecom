@@ -20,3 +20,9 @@ label{
 img{
     align-self: center;
 }
+.custom-select{
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    display: block;
+}

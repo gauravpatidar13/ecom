@@ -17,7 +17,7 @@ this.products=data;
 for(let i=0;i<this.products.length;i++){
   for(let j=0;j<this.carts_data.length;j++){
    if(this.products[i].id==this.carts_data[j].id){
-   this.products[i].qty=this.carts_data[j].qty;
+   this.products[i].data.qty=this.carts_data[j].qty;
      this.carts.push(this.products[i])
      break;
    }
@@ -32,7 +32,7 @@ for(let i=0;i<this.products.length;i++){
   calTotalPrice(){
     let total=0;
     for(let i=0;i<this.carts.length;i++){
-     total=total+this.carts[i].price*this.carts[i].qty;
+     total=total+this.carts[i].data.price*this.carts[i].data.qty;
     }
     this.total_cost= total;
   }

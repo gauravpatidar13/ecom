@@ -14,15 +14,15 @@
     </thead>
     <tbody>
 <tr *ngFor="let cart of carts">
-    <td data-label="product image" id="image"><img src="{{cart.image}}"></td>
-    <td data-label="product name" id="name"><p>{{cart.name}}</p></td>
-    <td data-label="product price" id="price">${{cart.price}}</td>
+    <td data-label="product image" id="image"><img src="{{cart.data.image}}"></td>
+    <td data-label="product name" id="name"><p>{{cart.data.name}}</p></td>
+    <td data-label="product price" id="price">${{cart.data.price}}</td>
     <td data-label="product qty" id="qty">
         <div class="qt-wr">
-        <span id="decr" (click)="decrement(cart)">-</span>{{cart.qty}}<span id="incr" (click)="increment(cart)">+</span>
+        <span id="decr" (click)="decrement(cart)">-</span>{{cart.data.qty}}<span id="incr" (click)="increment(cart)">+</span>
         </div>
     </td>
-            <td data-label="total cost" id="tc">${{cart.price*cart.qty}}</td>
+            <td data-label="total cost" id="tc">${{cart.data.price*cart.data.qty}}</td>
 
 </tr>
 <tr class="cua"><td class="ept"></td><td class="ept"></td><td class="ept"></td>

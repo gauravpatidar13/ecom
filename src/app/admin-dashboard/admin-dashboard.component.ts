@@ -24,7 +24,10 @@ this.ss.addProduct.subscribe(url=>{
 this.aps.addProduct({name:this.productToAdd.name,
 price:this.productToAdd.price,
 des:this.productToAdd.des,
-image:url})
+category:this.productToAdd.category,
+image:url}).then(value=>{
+  console.log(value);
+})
 })
   }
   readUrl(event:any) {

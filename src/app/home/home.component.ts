@@ -17,7 +17,9 @@ filterOption;
   constructor(private atc:AddToCartService,private fps:FetchProductsService,
     private ss:SharedService,private atcfd:AddToCartFromDetailService) {
     this.fps.fetchProduct().subscribe(data=>{
-      this.products=data;
+      
+  console.log(data)
+     this.products=data;
     })
     this.ss.searchTerm.subscribe(data=>{
       this.searchTerm=data;
@@ -36,9 +38,10 @@ this.ss.filterTerm.subscribe(filter=>{
   console.log(filter)
   this.filterOption=filter;
 })
-    })
+    });
    }
   addToCart(event){
+    console.log(event)
 this.atc.addToCart(event)
   }
   ngOnInit(): void {
