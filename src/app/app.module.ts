@@ -22,6 +22,13 @@ import { Login2Component } from './login2/login2.component';
 import { Login3Component } from './login3/login3.component';
 import { Login4Component } from './login4/login4.component';
 import { FilterByPricePipe } from './filter-by-price.pipe';
+import {FormsModule} from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
+import {AngularFireModule} from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from 'src/environments/environment';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,14 +48,19 @@ import { FilterByPricePipe } from './filter-by-price.pipe';
     Login2Component,
     Login3Component,
     Login4Component,
-    FilterByPricePipe
+    FilterByPricePipe,
+    ProfileComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

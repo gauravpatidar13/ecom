@@ -1,32 +1,59 @@
 <div class="container">
     <div class="register-wr">
         <div class="register-frm">
-<h2>Create New Account</h2>
-<div class="inp-wr">
-    <i class="fa fa-user"></i>
-    <input type="text" placeholder="Username">
-</div>
-<div class="inp-wr">
-    <i class="fa fa-envelope"></i>
-    <input type="email" placeholder="Email">
-</div>
-<div class="inp-wr">
-    <i class="fa fa-lock"></i>
-    <input type="password" placeholder="Password">
-</div>
-<div class="check-wr">
-<input type="checkbox"><span>I read and agree to Terms & Conditions</span>
-</div>
-<div class="create-ac">
-    <button>Create Account</button>
-</div>
+            <h2>Create New Account</h2>
+            <form #signInForm="ngForm" (ngSubmit)="registerUser(signInForm.value)">
+                <div class="inp-wr">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Username" minlength="3" required name="username" ngModel
+                        #username="ngModel">
+                </div>
+                <div class="alert alert-danger" *ngIf="username.touched&&!username.valid">
+                    <small *ngIf="username.errors.required"> Username is required</small>
+                    <small *ngIf="username.errors.minlength"> Username must have atleast 3 character</small>
+                </div>
+
+                <div class="inp-wr">
+                    <i class="fa fa-phone"></i>
+                    <input type="number" name="phone" ngModel #phone="ngModel" placeholder="Phone" required
+                        pattern="^\d{10}$">
+                </div>
+                <div class="alert alert-danger" *ngIf="phone.touched&&!phone.valid">
+                    <small *ngIf="phone.errors.required">Phone Number is required</small>
+                    <small *ngIf="phone.errors.pattern">Invalid Phone Number</small>
+                </div>
+                <div class="inp-wr">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Email" ngModel pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required name="email" #email="ngModel">
+                </div>
+                <div class="alert alert-danger" *ngIf="email.touched&&!email.valid">
+                    <small *ngIf="email.errors.required">Email is Required</small>
+                    <small *ngIf="email.errors.pattern">Invalid Email Address</small>
+                </div>
+                <div class="inp-wr">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" ngModel required minlength="4" name="password"
+                        #password="ngModel">
+                </div>
+                <div class="alert alert-danger" *ngIf="password.touched&&!password.valid">
+                    <small *ngIf="password.errors.required">Password is Required</small>
+                    <small *ngIf="password.errors.minlength">Password must have atleast 4 characters</small>
+                </div>
+                <div class="check-wr">
+                    <input type="checkbox" id="term" #terms (click)="toggleTerms(terms)"><label for="term">I read and agree to Terms &
+                        Conditions</label>
+                </div>
+                <div class="create-ac">
+                    <button [disabled]="!_terms||!signInForm.form.valid">Create Account</button>
+                </div>
+            </form>
         </div>
         <div class="register-info">
-<div class="reg-ii">
-    <h3>Hello World</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, nulla. Corporis ex sapiente rem minus officiis, quisquam error mollitia. Suscipit.</p>
-    <button>learn more</button>
-</div>
+            <div class="reg-ii">
+                <h3>Welcome to ecom</h3>
+                <p>We provide best option to you,visit out ecom website and choose online product as you wish to buy</p>
+                <button routerLink="/login2">Login</button>
+            </div>
         </div>
     </div>
 </div>

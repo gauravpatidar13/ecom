@@ -37,9 +37,9 @@ input{
     width: -webkit-fill-available;
 }
 .fg-pw{
-    font-size: 15px;
-    font-weight: 700;
-    color:gray;
+    font-size: 12px;
+    font-weight: bold;
+    color:maroon;
     margin-top: 10px;
 }
 .log-btn{

@@ -1,0 +1,22 @@
+.admin-panel{
+    height: 100vh;
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 50px;
+    background:linear-gradient(to right,rgb(52,122,184) 0%,rgb(116,85,168) 81%,rgb(131,75,176) 100%);
+}
+.form-group{
+    width: 50%;
+}
+label{
+    font-weight: bold;
+    font-size: 20px;
+    color:#000;
+}
+.admin-panel .product-add-wr{
+    display: flex;
+    align-items: center;
+}
+img{
+    align-self: center;
+}

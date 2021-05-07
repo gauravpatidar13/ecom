@@ -11,11 +11,15 @@ import {Register2Component} from './register2/register2.component';
 import {Register3Component} from './register3/register3.component';
 import { Login2Component } from './login2/login2.component';
 import { Login3Component } from './login3/login3.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 const routes: Routes = [
-  {path:'',redirectTo:'products',pathMatch:'full'},
+  {path:'',redirectTo:'register2',pathMatch:'full'},
   {path:'products',component:HomeComponent},
+  {path:'admin-dashboard',component:AdminDashboardComponent},
   {path:'products/:id',component:ProductDetailComponent},
   {path:'carts',component:CartsComponent},
+  {path:'profile',component:ProfileComponent},
   {path:'placeorder',component:PlaceOrderComponent},
   {path:'thankyou',component:ThankYouComponent},
   {path:'login',component:LoginComponent},

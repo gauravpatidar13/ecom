@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GetProfileService } from '../get-profile.service';
 import { SharedService } from '../shared.service';
 
 @Component({
@@ -10,10 +11,12 @@ import { SharedService } from '../shared.service';
 export class HeaderComponent implements OnInit {
 cate="All Categories";
 cart_count=0;
+profileImage;
 openHdl(searchTerm){
 this.ss.editSearch(searchTerm)
 }
-  constructor(private router:Router,private ar:ActivatedRoute,private ss:SharedService) {
+  constructor(private router:Router,private ar:ActivatedRoute,
+    private ss:SharedService,private gps:GetProfileService) {
    
     let savedCartCount=parseInt(localStorage.getItem('cartCount'));
 if(savedCartCount>0){
@@ -22,6 +25,11 @@ if(savedCartCount>0){
    this.ss.cartCount.subscribe(data=>{
      console.log(data)
      this.cart_count=data;
+   })
+let id=localStorage.getItem('currentUserId')
+   this.gps.getProfileImage(id).subscribe((result:any)=>{
+     console.log(result)
+this.profileImage=result.profile;
    })
     this.ar.queryParamMap.subscribe(params=>{
       let category=params.get('category')

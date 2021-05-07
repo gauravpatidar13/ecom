@@ -2,11 +2,22 @@
     <div class="login-wr">
 <label>Login</label>
 <div class="login-body">
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
-   <p class="fg-pw">Forget Password</p>
-   <button class="log-btn">Login</button>
-   <p class="not-m">Not a member?<span>Sign Up</span></p>
+    <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+    <input type="email" placeholder="Email" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" name="email" required ngModel #email="ngModel">
+    <div class="alert alert-danger" *ngIf="email.touched&&!email.valid">
+        <small *ngIf="email.errors.required">Email Address is Required</small>
+        <small *ngIf="email.errors.pattern">Invalid Email Address</small>
+    </div>
+    <input type="password" placeholder="Password" required minlength="4" name="password" ngModel #password="ngModel">
+    <div class="alert alert-danger" *ngIf="password.touched&&!password.valid">
+        <small *ngIf="password.errors.required">Password is Required</small>
+        <small *ngIf="password.errors.minlength">Password must have atleast 4 characters</small>
+    </div>
+    <p class="fg-pw">Forget Password</p>
+   <button class="log-btn" type="submit" [disabled]="!loginForm.form.valid">Login</button>
+</form>
+   <p class="not-m">Not a member?<span routerLink="/register2">Sign Up</span></p>
+   <p class="alert alert-danger" *ngIf="msg">Invalid Email or password</p>
 </div>
     </div>
 </div>

@@ -7,6 +7,10 @@ import { Subject } from 'rxjs';
 export class SharedService {
 public message=new Subject<any>();
 public msg=this.message.asObservable();
+public addProductTerm=new Subject<any>();
+public addProduct=this.addProductTerm.asObservable();
+public profileTerm=new Subject<any>();
+public profile=this.profileTerm.asObservable();
 public products=new Subject<any>();
 public pro=this.products.asObservable();
 public searchTerm=new Subject<any>();
@@ -21,13 +25,18 @@ onCartCount(ct){
   localStorage.setItem('cartCount',ct);
 this.cartCount.next(ct)
 }
+addProductUrl(url){
+  this.addProductTerm.next(url);
+}
 delity(dee){
   this.delete.next(dee)
 }
 editSearch(se){
   this.searchTerm.next(se)
 }
-
+profileUrl(url){
+  this.profileTerm.next(url)
+}
 editpros(pr){
   this.products.next(pr);
 }
